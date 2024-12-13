@@ -266,25 +266,29 @@ const FirstQuestionTable = ({ isRandom }) => {
         <table style={styles.table}>
           <thead>
             <tr>
-              <th style={{ width: '150px' }}>식품</th>
-              <th>영양소</th>
-              <th>효과</th>
-              <th>권장</th>
+              <th style={{ ...styles.th, width: '150px' }}>식품</th>
+              <th style={styles.th}>영양소</th>
+              <th style={styles.th}>효과</th>
+              <th style={styles.th}>권장</th>
             </tr>
           </thead>
           <tbody>
             {updatedData.map((item, index) => (
               <tr key={index}>
-                <td>
+                <td style={styles.td}>
                   <img
                     src={item.food}
                     alt={`food-${index}`}
                     style={styles.img}
                   />
                 </td>
-                <td>{item.nutrient}</td>
-                <td style={{ whiteSpace: 'pre-line' }}>{item.effect}</td>
-                <td style={{ whiteSpace: 'pre-line' }}>{item.recommend}</td>
+                <td style={styles.td}>{item.nutrient}</td>
+                <td style={{ ...styles.td, whiteSpace: 'pre-line' }}>
+                  {item.effect}
+                </td>
+                <td style={{ ...styles.td, whiteSpace: 'pre-line' }}>
+                  {item.recommend}
+                </td>
               </tr>
             ))}
           </tbody>

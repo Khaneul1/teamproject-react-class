@@ -8,6 +8,7 @@ const Start = () => {
   const [offsetY, setOffsetY] = useState(0);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (nutrientRef.current) {
       setOffsetY(nutrientRef.current.offsetHeight);
     }

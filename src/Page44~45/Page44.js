@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Plant from './image/plant.png';
 import Back2 from './image/back2.png';
 import image1 from './image/image1.png';
 import image2 from './image/image2.png';
-import LinkBtn from '../Page42~43/component/LinkBtn';
 
 const styles = {
   wrapper: {
@@ -109,6 +109,12 @@ const Page44 = (props) => {
     }
   };
 
+  const navigate = useNavigate();
+
+  const handleNextPage = () => {
+    navigate('/page45');
+  };
+
   return (
     <div style={styles.wrapper} alt="dv">
       <img
@@ -212,7 +218,9 @@ const Page44 = (props) => {
           </td>
         </tr>
       </table>
-      <LinkBtn link="/page45"></LinkBtn>
+      <button className="next-button" onClick={handleNextPage}>
+        다음 페이지
+      </button>
     </div>
   );
 };
