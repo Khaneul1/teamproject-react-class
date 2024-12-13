@@ -18,8 +18,8 @@ const styles = {
     marginBottom: '20px',
   },
   image: {
-    width: '200px',
-    height: '50px',
+    width: '150px',
+    height: '30px',
     marginBottom: '10px',
     marginLeft: '-50px',
   },
@@ -31,7 +31,7 @@ const styles = {
     height: '50px',
   },
   title: {
-    fontSize: '25px',
+    fontSize: '15px',
     fontWeight: 'lighter',
   },
   nutrient: {
