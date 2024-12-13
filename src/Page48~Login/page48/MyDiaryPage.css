@@ -31,14 +31,17 @@
 }
 
 .tomorrow-plan-table {
-  width: 51%;
+  border-top: 1px solid #a7dab8;
+  border-bottom: 1px solid #a7dab8;
+  padding: 0.5rem;
+  width: 50%;
   border-collapse: collapse;
   margin-top: 2rem;
 }
 
 .plan-title {
   border-right: 1px solid #a7dab8;
-  width: 12.7%;
+  width: 18.5%;
   text-align: start;
   padding-left: 2.2rem;
 }

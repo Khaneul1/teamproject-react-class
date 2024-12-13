@@ -28,14 +28,14 @@ const TimeTable = ({ tasks, handleTaskChange }) => {
                 <span>{description}</span>
               </div>
             </td>
-            <div className="time-table-input-box">
+            <td className="time-table-input-box">
               <textarea
                 type="text"
                 value={tasks[time] || ''}
                 onChange={(e) => handleTaskChange(time, e.target.value)}
                 className="time-table-input"
               />
-            </div>
+            </td>
           </tr>
         ))}
       </tbody>

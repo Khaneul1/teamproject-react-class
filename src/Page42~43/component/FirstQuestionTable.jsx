@@ -35,9 +35,9 @@ const styles = {
   block: {
     cursor: 'pointer',
     pointerEvents: 'auto',
-    display: 'flex', // Flexbox를 사용
-    justifyContent: 'center', // 가로 가운데 정렬
-    alignItems: 'center', // 세로 가운데 정렬
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     width: '80%',
     height: '100%',
     whiteSpace: 'pre-line',
@@ -48,7 +48,21 @@ const styles = {
   },
   scaling: {
     display: 'inline-block',
-    transition: 'transform 0.3s ease-out' /* 애니메이션 효과 추가 */,
+    transition: 'transform 0.3s ease-out',
+  },
+  td: {
+    width: '130px',
+    justifyContent: 'center',
+    alignItems: 'center',
+    border: '1px solid silver',
+  },
+  th: {
+    width: '100px',
+    height: '16px',
+    border: '1px solid silver',
+  },
+  tr: {
+    width: '100px',
   },
 };
 
@@ -177,7 +191,7 @@ const FirstQuestionTable = ({ isRandom }) => {
           {...emptyValue.reduce((props, item, index) => {
             const key = `base${index + 1}`;
             props[key] = (
-              <td style={{ height: '90px' }}>
+              <td style={{ ...styles.td, height: '91px' }}>
                 <span
                   style={styles.block}
                   onClick={handleClick}
@@ -195,30 +209,36 @@ const FirstQuestionTable = ({ isRandom }) => {
 
         <table style={styles.table}>
           <thead>
-            <tr>
-              <th style={{ width: '150px' }}>식품</th>
-              <th>영양소</th>
-              <th>효과</th>
-              <th>권장</th>
+            <tr style={styles.tr}>
+              <th style={{ ...styles.th, width: '150px' }}>식품</th>
+              <th style={styles.th}>영양소</th>
+              <th style={styles.th}>효과</th>
+              <th style={styles.th}>권장</th>
             </tr>
           </thead>
           <tbody>
             {updatedData.map((item, index) => (
-              <tr key={index}>
+              <tr key={index} style={styles.tr}>
                 <td>
-                  <img src={item.food} style={{ width: '150px' }} />
+                  <img
+                    src={item.food}
+                    style={{ ...styles.td, width: '150px' }}
+                  />
                 </td>
-                <td onClick={(e) => handleClick(e, index, 'nutrient')}>
+                <td
+                  onClick={(e) => handleClick(e, index, 'nutrient')}
+                  style={styles.td}
+                >
                   {item.nutrient === '' ? '' : item.nutrient}
                 </td>
                 <td
-                  style={{ whiteSpace: 'pre-line' }}
+                  style={{ ...styles.td, whiteSpace: 'pre-line' }}
                   onClick={(e) => handleClick(e, index, 'effect')}
                 >
                   {item.effect === '' ? '' : item.effect}
                 </td>
                 <td
-                  style={{ whiteSpace: 'pre-line' }}
+                  style={{ ...styles.td, whiteSpace: 'pre-line' }}
                   onClick={(e) => handleClick(e, index, 'recommend')}
                 >
                   {item.recommend === '' ? '' : item.recommend}
