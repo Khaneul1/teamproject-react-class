@@ -1,17 +1,20 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import Page47Title from './Page47Title';
-import Box from './Box';
-import NextButton from './NextButton';
+import ProblemComponent from './ProblemComponent';
+
 const Start2 = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <div>
         <Page47Title />
       </div>
 
-      <Box />
-      <NextButton />
+      <ProblemComponent />
     </div>
   );
 };

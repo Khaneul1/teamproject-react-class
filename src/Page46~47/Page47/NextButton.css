@@ -8,7 +8,7 @@
 .next-button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #4caf50;
+  background-color: green;
   color: white;
   border: none;
   border-radius: 5px;
@@ -17,5 +17,5 @@
 }
 
 .next-button:hover {
-  background-color: #45a049;
+  background-color: white;
 }

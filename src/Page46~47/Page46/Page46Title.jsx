@@ -1,8 +1,6 @@
 import React from 'react';
-import NextButton from './NextButton';
 
 const Plant = `${process.env.PUBLIC_URL}/plant.png`;
-const SmallPlant = `${process.env.PUBLIC_URL}/A.png`;
 
 const styles = {
   wrapper: {
@@ -10,7 +8,6 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     padding: '20px',
-    position: 'relative',
   },
   titleWrapper: {
     display: 'flex',
@@ -43,18 +40,15 @@ const styles = {
 const Page46Title = (props) => {
   return (
     <div style={styles.wrapper}>
-      <img src={SmallPlant} style={styles.smallImage} alt="Small Plant" />
-
       <div style={styles.titleWrapper}>
         <img src={Plant} style={styles.image} alt="Plant" />
         <h1 style={styles.title}>
           앞서 기억해 둔 노인에게 결핍되기 쉬운{' '}
-          <span style={styles.nutrient}>영양소</span>를 떠올리며 연결해
+          <span style={styles.nutrient}>영양소</span>를 찾아 동그라미
           <br />
-          보세요.
+          하세요.
         </h1>
       </div>
-      <NextButton />
     </div>
   );
 };

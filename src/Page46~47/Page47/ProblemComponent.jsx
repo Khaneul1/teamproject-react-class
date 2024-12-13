@@ -54,7 +54,7 @@ const foodToNutrientMapping = {
   토마토: '비타민A',
 };
 
-const ProblemComponent = ({ offsetY }) => {
+const ProblemComponent = ({}) => {
   const [lines, setLines] = useState([]);
   const [startPoint, setStartPoint] = useState(null);
 
@@ -167,9 +167,9 @@ const ProblemComponent = ({ offsetY }) => {
           <line
             key={index}
             x1={line.startX - 18}
-            y1={line.startY - offsetY - 19}
+            y1={line.startY - 245}
             x2={line.endX - 18}
-            y2={line.endY - offsetY - 19}
+            y2={line.endY - 243}
             stroke="black"
             strokeWidth={2}
           />

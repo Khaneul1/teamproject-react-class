@@ -1,26 +1,15 @@
 import React, { useRef, useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import Page46Title from './Page46Title';
-import ProblemComponent from './ProblemComponent';
+import Box from './Box';
 
 const Start = () => {
-  const nutrientRef = useRef(null);
-  const [offsetY, setOffsetY] = useState(0);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    if (nutrientRef.current) {
-      setOffsetY(nutrientRef.current.offsetHeight);
-    }
-  }, []);
-
   return (
     <div>
-      <div ref={nutrientRef}>
+      <div>
         <Page46Title />
       </div>
-
-      <ProblemComponent offsetY={offsetY} />
+      <Box />
     </div>
   );
 };
