@@ -18,7 +18,7 @@ const styles = {
   activeIcon: {
     fontSize: '24px',
     cursor: 'pointer',
-    color: 'red', // 클릭 시 활성화된 색상
+    color: 'red',
     fontWeight: 'bold',
   },
 };

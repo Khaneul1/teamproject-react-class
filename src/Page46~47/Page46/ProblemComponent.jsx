@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import NextButton from './NextButton'; // nextbutton.jsx를 임포트
+import NextButton from './NextButton';
 
-// 스타일 정의 (기존과 동일)
 const styles = {
   container: {
     display: 'flex',
@@ -47,7 +46,6 @@ const styles = {
   },
 };
 
-// 음식과 영양소의 연결 관계를 정의하는 객체
 const foodToNutrientMapping = {
   굴: '아연',
   간: '비타민B12',
@@ -57,8 +55,8 @@ const foodToNutrientMapping = {
 };
 
 const ProblemComponent = ({ offsetY }) => {
-  const [lines, setLines] = useState([]); // 그려진 선들을 저장
-  const [startPoint, setStartPoint] = useState(null); // 선의 시작점
+  const [lines, setLines] = useState([]);
+  const [startPoint, setStartPoint] = useState(null);
 
   const leftImages = [
     { id: '굴', image: '굴.png' },
@@ -132,7 +130,6 @@ const ProblemComponent = ({ offsetY }) => {
     }
   };
 
-  // 5개의 선이 완성되었는지 확인하는 조건
   const allLinesCompleted = lines.length === 5;
 
   return (
@@ -179,7 +176,6 @@ const ProblemComponent = ({ offsetY }) => {
         ))}
       </svg>
 
-      {/* 5개의 선이 모두 그려지면 nextbutton.jsx를 렌더링 */}
       {allLinesCompleted && <NextButton />}
     </div>
   );

@@ -4,11 +4,10 @@ import Page46Title from './Page46Title';
 import ProblemComponent from './ProblemComponent';
 
 const Start = () => {
-  const nutrientRef = useRef(null); // RememberingNutrients의 높이를 참조
+  const nutrientRef = useRef(null);
   const [offsetY, setOffsetY] = useState(0);
 
   useEffect(() => {
-    // Page45Title 높이를 측정하여 offset 설정
     if (nutrientRef.current) {
       setOffsetY(nutrientRef.current.offsetHeight);
     }

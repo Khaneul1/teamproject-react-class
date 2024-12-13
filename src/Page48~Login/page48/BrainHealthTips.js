@@ -23,7 +23,6 @@ const brainHealthTips = [
   },
 ];
 
-// 랜덤으로 선택된 소제목과 내용
 const randomTip =
   brainHealthTips[Math.floor(Math.random() * brainHealthTips.length)];
 

@@ -2,7 +2,7 @@ import React from 'react';
 import NextButton from './NextButton';
 
 const Plant = `${process.env.PUBLIC_URL}/plant.png`;
-const SmallPlant = `${process.env.PUBLIC_URL}/A.png`; // 오른쪽 상단에 추가할 이미지
+const SmallPlant = `${process.env.PUBLIC_URL}/A.png`;
 
 const styles = {
   wrapper: {
@@ -10,7 +10,7 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     padding: '20px',
-    position: 'relative', // 오른쪽 상단 이미지를 배치하기 위해 상대 위치 설정
+    position: 'relative',
   },
   titleWrapper: {
     display: 'flex',
@@ -25,10 +25,10 @@ const styles = {
     marginLeft: '-50px',
   },
   smallImage: {
-    position: 'absolute', // 부모 컨테이너 기준으로 절대 위치 설정
-    top: '10px', // 위에서 10px 간격
-    right: '380px', // 오른쪽에서 10px 간격
-    width: '250px', // 이미지 크기 설정
+    position: 'absolute',
+    top: '10px',
+    right: '380px',
+    width: '250px',
     height: '50px',
   },
   title: {
