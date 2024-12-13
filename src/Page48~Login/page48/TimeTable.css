@@ -3,7 +3,7 @@
   width: 50%;
 }
 
-table {
+.time-table table {
   width: 100%;
   border-collapse: collapse;
   text-align: center;
@@ -12,25 +12,25 @@ table {
   border-top: 2px solid #a7dab8;
 }
 
-tr {
+.time-table tr {
   display: table-row;
 }
 
-tr th {
+.time-table tr th {
   display: table-cell;
   padding: 0.8rem;
   vertical-align: middle;
 }
 
-th,
-td {
+.time-table th,
+.time-table td {
   text-align: center;
   padding: 1rem;
   vertical-align: middle;
   border-bottom: 1px solid #a7dab8;
 }
 
-th {
+.time-table th {
   font-weight: bold;
   color: #7a7a7a;
   font-size: 1.1rem;
