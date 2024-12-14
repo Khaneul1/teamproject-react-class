@@ -20,8 +20,8 @@ function App() {
       <Route path="/page2" element={<SecondPage />} />
       <Route path="/page44" element={<Page44 />} />
       <Route path="/page45" element={<Page45 />} />
-      <Route path="/page46" element={<Start2 />} />
-      <Route path="/page47" element={<Start />} />
+      <Route path="/page46" element={<Start />} />
+      <Route path="/page47" element={<Start2 />} />
       <Route path="page48" element={<MyDiaryPage />} />
     </Routes>
   );
