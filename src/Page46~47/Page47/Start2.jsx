@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import ReactDOM from 'react-dom';
 import Page47Title from './Page47Title';
 import ProblemComponent from './ProblemComponent';
 
