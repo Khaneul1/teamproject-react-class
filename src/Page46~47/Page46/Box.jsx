@@ -52,8 +52,6 @@ const allNutrients = [
 function Box() {
   const [nutrients, setNutrients] = useState([]);
   const [selectedNutrients, setSelectedNutrients] = useState([]);
-  const [isButtonVisible, setIsButtonVisible] = useState(false);
-  const [correctNutrients, setCorrectNutrients] = useState([]);
 
   useEffect(() => {
     const getRandomNutrients = () => {
@@ -61,8 +59,6 @@ function Box() {
       const selectedEssential = essentialNutrientsForElderly
         .sort(() => Math.random() - 0.5)
         .slice(0, randomCount);
-
-      setCorrectNutrients(selectedEssential);
 
       const remainingNutrients = allNutrients
         .filter((nutrient) => !selectedEssential.includes(nutrient))
@@ -85,15 +81,6 @@ function Box() {
     }
   };
 
-  useEffect(() => {
-    const isCorrect =
-      selectedNutrients.length === correctNutrients.length &&
-      selectedNutrients.every((nutrient) =>
-        correctNutrients.includes(nutrient)
-      );
-    setIsButtonVisible(isCorrect);
-  }, [selectedNutrients, correctNutrients]);
-
   return (
     <div className="nutrient-box">
       <div className="grid">
@@ -110,7 +97,7 @@ function Box() {
         ))}
       </div>
 
-      {isButtonVisible && <NextButton />}
+      <NextButton />
     </div>
   );
 }

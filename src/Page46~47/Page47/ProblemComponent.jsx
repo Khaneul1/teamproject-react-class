@@ -130,8 +130,6 @@ const ProblemComponent = ({}) => {
     }
   };
 
-  const allLinesCompleted = lines.length === 5;
-
   return (
     <div style={styles.container}>
       <div style={styles.column}>
@@ -176,7 +174,7 @@ const ProblemComponent = ({}) => {
         ))}
       </svg>
 
-      {allLinesCompleted && <NextButton />}
+      <NextButton />
     </div>
   );
 };

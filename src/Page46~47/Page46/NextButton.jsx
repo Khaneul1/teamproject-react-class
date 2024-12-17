@@ -6,7 +6,7 @@ function NextButton() {
   const navigate = useNavigate();
 
   const handleNextPage = () => {
-    navigate('/start2');
+    navigate('/page47');
   };
 
   return (

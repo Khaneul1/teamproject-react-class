@@ -174,10 +174,10 @@ const FirstQuestionTable = ({ isRandom }) => {
   };
 
   const checkCorrect = () => {
-    const isCorrect =
+    const isCorrects =
       JSON.stringify(VitaminInfo) === JSON.stringify(updatedData);
 
-    if (isCorrect) {
+    if (isCorrects) {
       alert('정답입니다');
     } else {
       alert('오답입니다');
